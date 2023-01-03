@@ -5,10 +5,10 @@ import "fmt"
 type deck [] string 
 
 func newDeck() deck{
-	cards := []string{}
+	cards := deck{}
 
-	cardSuits:= deck{"Spades", "Hearts", "Diamonds"}
-	cardValues:= deck{"Ace","Two","Three"}
+	cardSuits:= []string{"Spades", "Hearts", "Diamonds"}
+	cardValues:= []string{"Ace","Two","Three"}
 
 	for _,suit:= range cardSuits{
 		for	_,value:= range cardValues{
@@ -19,8 +19,13 @@ func newDeck() deck{
 	return cards
 }
 
+
+func deal(d deck, handSize int) (deck,deck){
+	return d[:handSize], d[handSize:]
+}
+
 func (d deck) print(){
-	for _,card := range d{
-		fmt.Println(card)
+	for i,card := range d{
+		fmt.Println(i+1, card)
 	}
 }
