@@ -3,8 +3,8 @@ package main
 
 func main(){
 	cards := newDeck()
-	leftCards, _ := deal(cards,2)
-	leftCards.print();
+	cards.shuffle()
+	cards.print()
 }
 
 func newCard() string{
