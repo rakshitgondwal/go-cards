@@ -9,4 +9,4 @@ func main(){
 
 func newCard() string{
 	return "Ace Of Diamonds"
-}
+};
