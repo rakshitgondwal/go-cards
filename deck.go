@@ -5,7 +5,6 @@ import (
 	"math/rand"
 	"time"
 )
-
 type deck [] string 
 
 func newDeck() deck{
